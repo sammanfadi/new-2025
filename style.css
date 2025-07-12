@@ -89,12 +89,6 @@ main {
 }
 
 @media(min-width: 768px){
-.col-span-6{grid-column: span 6;}
-.col-span-12{grid-column: span 12;}
-}
-
-.post-thumb img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  .col-span-6{grid-column: span 6;}
+  .col-span-12{grid-column: span 12;}
 }
