@@ -1,0 +1,94 @@
+/*
+Theme Name: Mhtwa Theme
+Description: Advanced theme for Mhtwa with dark/light mode and PWA support.
+Author: Codex
+Version: 0.2
+*/
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --accent-color: #0277bd;
+  --font-family: 'Cairo', sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-color: #111;
+  --text-color: #eee;
+  --accent-color: #82b1ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+  padding: 1rem;
+  text-align: center;
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.article {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .article {
+  background: rgba(0,0,0,0.3);
+}
+
+.toggle-theme {
+  cursor: pointer;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chat-message {
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.chat-message:hover {
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .chat-message {
+  background: #222;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+@media(min-width: 768px){
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media(min-width: 768px){
+  .col-span-6{grid-column: span 6;}
+  .col-span-12{grid-column: span 12;}
+}
