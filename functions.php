@@ -42,4 +42,21 @@ function mhtwa_security_headers(){
 }
 add_action('send_headers', 'mhtwa_security_headers');
 
+// Remove WordPress version from header for security
+remove_action('wp_head', 'wp_generator');
+
+// Disable XML-RPC to reduce attack surface
+add_filter('xmlrpc_enabled', '__return_false');
+
+// Track post views for simple analytics
+function mhtwa_track_post_views(){
+    if(is_singular()){ 
+        $post_id = get_the_ID();
+        $views = get_post_meta($post_id, 'mhtwa_views', true);
+        $views = $views ? (int)$views + 1 : 1;
+        update_post_meta($post_id, 'mhtwa_views', $views);
+    }
+}
+add_action('wp', 'mhtwa_track_post_views');
+
 

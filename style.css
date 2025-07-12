@@ -98,3 +98,9 @@ main {
   border-radius: 10px;
   margin-bottom: 1rem;
 }
+
+.views-count {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-top: 0.5rem;
+}

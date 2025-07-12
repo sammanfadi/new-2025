@@ -7,6 +7,9 @@
     <?php endif; ?>
     <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
+    <div class="views-count">
+      <?php echo intval( get_post_meta( get_the_ID(), 'mhtwa_views', true ) ); ?> views
+    </div>
   </div>
 <?php endwhile; endif; ?>
 </main>
