@@ -13,7 +13,7 @@ This is a growing WordPress theme designed for the **Mhtwa** project. The goal i
 | Phase | Description | Status |
 |-------|-------------|--------|
 |Infrastructure|Create unified design system, responsive grid, reusable components|**Completed** (initial setup)|
-|Performance|Optimize Core Web Vitals, lazy loading, image compression|In progress|
+|Performance|Optimize Core Web Vitals, lazy loading, image compression|In progress (lazy loading & compression added)|
 |UX|Implement ChatGPT-like layout and smooth transitions|**Completed** (basic layout)|
 |AI & Personalization|Content recommendations and AI search|Planned|
 |Content tools|Visual editor enhancements and 3D content support|Planned|
